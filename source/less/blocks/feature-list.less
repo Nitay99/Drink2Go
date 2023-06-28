@@ -1,0 +1,44 @@
+.feature-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+  padding-left: 0;
+
+  list-style-type: none;
+}
+
+.feature-list__item {
+  text-align: center;
+  padding-top: 66px;
+
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  &--watch {
+    background-image: url("../img/watch-icon.svg");
+  }
+
+  &--shield {
+    background-image: url("../img/shield-icon.svg");
+  }
+
+  &--lightning {
+    background-image: url("../img/lightning-icon.svg");
+  }
+
+  &--sheet {
+    background-image: url("../img/sheet-icon.svg");
+  }
+}
+
+.feature-list__title {
+  font-size: 18px;
+  line-height: 32px;
+
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.feature-list__text {
+  margin: 0;
+}

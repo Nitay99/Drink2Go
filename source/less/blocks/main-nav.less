@@ -1,0 +1,25 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.main-nav__toggle {
+  position: relative;
+  height: 60px;
+  width: 60px;
+
+  background-color: @basic-back;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 22px;
+    width: 16px;
+    height: 1.5px;
+
+    box-shadow: 0 1.5px 0 0 @basic-text, 0 6.75px 0 0 @basic-text, 0 12px 0 0 @basic-text;
+  }
+}

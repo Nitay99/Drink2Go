@@ -1,0 +1,53 @@
+.slider {
+  position: relative;
+}
+
+.slider__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.slider__desc {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.slider__order {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.slider__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+
+  margin-right: 20px;
+}
+
+.slider__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration: line-through;
+  color: @additional-color;
+
+  margin-right: 6px;
+}
+
+.slider > .swiper-button-prev,
+.slider > .swiper-button-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  top: 0;
+}
+
+.slider > .swiper-button-next {
+  right: 0;
+}
