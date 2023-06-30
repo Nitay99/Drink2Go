@@ -1,6 +1,9 @@
 .button {
   display: inline-block;
-  padding: 8px 20px;
+  padding-top: 8px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-left: 20px;
 
   border-radius: 4px;
   border: none;
@@ -45,5 +48,16 @@
   &--secondary:disabled {
     color: @basic-back;
     background-color: #e2e2e2;
+  }
+
+  &--cart {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 46px;
+    width: 141px;
+
+    background-image: url("../img/cart-icon.svg");
+    background-repeat: no-repeat;
+    background-position: top 10px left 20px;
   }
 }

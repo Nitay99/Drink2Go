@@ -7,7 +7,17 @@
   max-width: 318px;
 
   &--disabled {
+    .range__bar {
+      background-color: #bdbdbd;
+    }
 
+    .range__toggle {
+      border-color: #bdbdbd;
+    }
+
+    .range__toggle::before {
+      display: none;
+    }
   }
 }
 
@@ -35,6 +45,38 @@
   background-color: @basic-back;
   border: 2px solid #9070ec;
   border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      background-color: rgba(120, 89, 207, 0.25);
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @additional-color;
+    }
+  }
+
+  &:disabled {
+    border-color: #bdbdbd;
+  }
+
+  &:disabled::before {
+    display: none;
+  }
 
   &--min {
     left: -24px;
