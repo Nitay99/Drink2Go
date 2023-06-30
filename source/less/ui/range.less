@@ -1,0 +1,46 @@
+.range {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 24px;
+  min-width: 223px;
+  max-width: 318px;
+
+  &--disabled {
+
+  }
+}
+
+.range__scale {
+  width: 100%;
+  height: 2px;
+
+  background-color: #e2e2e2;
+}
+
+.range__bar {
+  position: absolute;
+  height: 4px;
+  top: 10px;
+
+  background-color: #9070ec;
+}
+
+.range__toggle {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -10px;
+
+  background-color: @basic-back;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+
+  &--min {
+    left: -24px;
+  }
+
+  &--max {
+    right: -24px;
+  }
+}

@@ -1,0 +1,93 @@
+.radio-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding-left: 34px;
+}
+
+.radio-control__icon {
+  position: absolute;
+  box-sizing: border-box;
+  height: 24px;
+  width: 24px;
+  top: 0;
+  left: 0;
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: #bdbdbd;
+  background-color: @basic-back;
+}
+
+.radio-control__icon::before {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  left: 2px;
+
+  border-radius: 50%;
+}
+
+.radio-control__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Hover */
+
+.radio-control:hover .radio-control__icon {
+  border-color: @additional-color;
+}
+
+.radio-control:hover > .radio-control__icon::before {
+  display: block;
+  background-color: @additional-color;
+  opacity: 0.25;
+}
+
+/* Focus */
+
+.radio-control > input[type="radio"]:focus-visible ~ .radio-control__icon {
+  border-color: @additional-color;
+}
+
+.radio-control > input[type="radio"]:focus-visible ~ .radio-control__icon::before {
+  display: block;
+
+  background-color: @additional-color;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+/* Checked */
+
+.radio-control > input[type="radio"]:checked + .radio-control__icon {
+  border-color: @additional-color;
+}
+
+.radio-control > input[type="radio"]:checked + .radio-control__icon::before {
+  display: block;
+
+  background-color: @additional-color;
+  border-radius: 50%;
+}
+
+/* Disabled */
+
+.radio-control > input[type="radio"]:disabled ~ .radio-control__text {
+  opacity: 0.5;
+}
+
+.radio-control > input[type="radio"]:disabled ~ .radio-control__icon {
+  opacity: 0.5;
+  border-color: #bdbdbd;
+}
+
+.radio-control > input[type="radio"]:disabled ~ .radio-control__icon::before {
+  background-color: #bdbdbd;
+}

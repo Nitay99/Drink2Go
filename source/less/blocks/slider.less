@@ -46,8 +46,37 @@
   width: 20px;
   height: 100%;
   top: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+  }
+}
+
+.slider > .swiper-button-prev {
+  left: 0;
+
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  &:active {
+    background: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+  }
 }
 
 .slider > .swiper-button-next {
   right: 0;
+
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  &:active {
+    background: linear-gradient(to left, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+  }
 }

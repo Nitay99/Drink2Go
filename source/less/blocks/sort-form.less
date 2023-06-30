@@ -1,0 +1,65 @@
+.sort-form {
+
+}
+
+.sort-form__group-control {
+  border: none;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
+.sort-form__title {
+  margin-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.sort-form__range {
+  margin-bottom: 24px;
+}
+
+.sort-form__fields {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 318px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    top: calc(50% - 1px);
+    left: calc(50% - 4px);
+
+    background-color: #bdbdbd;
+  }
+}
+
+.sort-form__field {
+  width: 42%;
+  box-sizing: border-box;
+}
+
+.sort-form__buttons-container {
+  margin-bottom: 40px;
+}
+
+.sort-form__button {
+  width: 100%;
+  box-sizing: border-box;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
+}
