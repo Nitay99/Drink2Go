@@ -1,13 +1,43 @@
 .sort-form {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+}
+
+.sort-form__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    margin-bottom: 37px;
+  }
 }
 
 .sort-form__group-control {
   border: none;
+
   padding: 0;
+  width: 280px;
+  box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 222px;
+    margin-bottom: 0;
+  }
 }
 
 .sort-form__title {
@@ -28,7 +58,15 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  max-width: 318px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
 
   &::before {
     content: "";
@@ -39,31 +77,54 @@
     left: calc(50% - 4px);
 
     background-color: #bdbdbd;
+
+    @media (min-width: @desktop-width) {
+      width: 10px;
+    }
   }
 }
 
-.sort-form__field {
-  width: 42%;
-}
-
 .sort-form__buttons-container {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 .sort-form__button {
   width: 100%;
   box-sizing: border-box;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     width: auto;
+    min-width: 120px;
+
+    &--submit {
+      margin-right: 15px;
+      width: 137px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
   }
 }
 
-.sort-form__sort-type > span {
+.sort-form__sort-type {
+  text-align: right;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 124px;
+    right: 0;
+  }
+}
+
+.sort-form__sort-type span {
   margin-right: 4px;
 
   font-size: 16px;

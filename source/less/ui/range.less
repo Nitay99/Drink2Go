@@ -3,8 +3,15 @@
   align-items: center;
   position: relative;
   height: 24px;
-  min-width: 223px;
-  max-width: 318px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
 
   &--disabled {
     .range__bar {
@@ -32,8 +39,18 @@
   position: absolute;
   height: 4px;
   top: 10px;
+  left: 24px;
+  width: 212px;
 
   background-color: #9070ec;
+
+  @media (min-width: @tablet-width) {
+    width: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 250px;
+  }
 }
 
 .range__toggle {
@@ -51,8 +68,8 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    left: 2px;
-    top: 2px;
+    left: 2.5px;
+    top: 2.5px;
 
     border-radius: 50%;
   }
@@ -60,7 +77,7 @@
   &:hover,
   &:focus-visible {
     &::before {
-      background-color: rgba(120, 89, 207, 0.25);
+      background-color: #7859cf40;
     }
   }
 

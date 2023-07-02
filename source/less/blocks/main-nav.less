@@ -1,7 +1,10 @@
 .main-nav {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
+  position: relative;
 }
 
 .main-nav__toggle {
@@ -13,6 +16,16 @@
   border: none;
   cursor: pointer;
 
+  &:active {
+    background-color: #f0ebff;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
   &::before {
     content: "";
     position: absolute;
@@ -23,8 +36,53 @@
 
     box-shadow: 0 1.5px 0 0 @basic-text, 0 6.75px 0 0 @basic-text, 0 12px 0 0 @basic-text;
   }
+}
 
-  &:active {
-    background-color: #f0ebff;
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 23px;
+    height: 1.5px;
+    width: 15px;
+    background-color: @basic-text;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    order: 1;
   }
 }
